@@ -4,5 +4,6 @@ __pycache__/
 .venv/
 env/
 venv/
+.env
 *.sqlite3
 *.py[cod]

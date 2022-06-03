@@ -6,8 +6,13 @@ authors = ["Danil Nikitin <d.nikitin.dev@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+Django = "2.2.24"
+environs = "5.2.1"
+Pillow = "8.3.2"
+folium = "0.10.0"
 
 [tool.poetry.dev-dependencies]
+django-debug-toolbar = "2.2.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
