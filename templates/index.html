@@ -34,7 +34,7 @@
                   {% endif %}
                 </div>
                 <div class="blog__slide__content">
-                  <h3><a href="#">{{most_popular_post.title}}</a></h3>
+                  <h3><a href="{% url 'post_detail' most_popular_post.slug %}">{{most_popular_post.title}}</a></h3>
                   <p>{{most_popular_post.published_at}}</p>
                 </div>
               </div>
@@ -59,9 +59,9 @@
                     <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="default image">
                   {% endif %}
                   <ul class="thumb-info" style="max-width: 550px;">
-                    <li><a href="#"><i class="ti-user"></i>{{fresh_post.author}}</a></li>
-                    <li><a href="#"><i class="ti-notepad"></i>{{fresh_post.published_at}}</a></li>
-                    <li><a href="#"><i class="ti-themify-favicon"></i>{{fresh_post.comments_amount}} Comments</a></li>
+                    <li><a href="{% url 'post_detail' fresh_post.slug %}"><i class="ti-user"></i>{{fresh_post.author}}</a></li>
+                    <li><a href="{% url 'post_detail' fresh_post.slug %}"><i class="ti-notepad"></i>{{fresh_post.published_at}}</a></li>
+                    <li><a href="{% url 'post_detail' fresh_post.slug %}"><i class="ti-themify-favicon"></i>{{fresh_post.comments_amount}} Comments</a></li>
                   </ul>
                 </div>
                 <div class="details mt-20">
