@@ -1,6 +1,6 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
-from django.contrib.auth.models import User
 
 
 class Post(models.Model):
@@ -14,7 +14,7 @@ class Post(models.Model):
         User,
         on_delete=models.CASCADE,
         verbose_name="Автор",
-        limit_choices_to={'is_staff': True})
+        limit_choices_to={"is_staff": True})
     likes = models.ManyToManyField(
         User,
         related_name="liked_posts",
@@ -25,12 +25,12 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('post_detail', args={'slug': self.slug})
+        return reverse("post_detail", args={"slug": self.slug})
 
     class Meta:
-        ordering = ['-published_at']
-        verbose_name = 'пост'
-        verbose_name_plural = 'посты'
+        ordering = ["-published_at"]
+        verbose_name = "пост"
+        verbose_name_plural = "посты"
 
 
 class Comment(models.Model):
@@ -50,6 +50,6 @@ class Comment(models.Model):
         return f"{self.author.username} under {self.post.title}"
 
     class Meta:
-        ordering = ['published_at']
-        verbose_name = 'комментарий'
-        verbose_name_plural = 'комментарии'
+        ordering = ["published_at"]
+        verbose_name = "комментарий"
+        verbose_name_plural = "комментарии"
