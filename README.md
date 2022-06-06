@@ -12,10 +12,15 @@
 ```
 cp .env.example .env
 ```
-- Установите актуальную версию poetry:
+- Установите актуальную версию poetry в `UNIX`-подобных дистрибутивах с помощью команды:
 ```
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
 ```
+или в `Windows Powershell`:
+```
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python -
+```
+
 - Добавьте к переменной окружения `$PATH` команду poetry:
 ```
 source $HOME/.poetry/bin
