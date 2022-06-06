@@ -40,10 +40,6 @@ flake8 . && isort .
 ```
 python3 manage.py migrate
 ```
-- Для запуска сайта с тестовыми данными, используйте команду:
-```
-python3 manage.py loaddata db.json
-```
 - Запустите сайт командой:
 ```
 python3 manage.py runserver
