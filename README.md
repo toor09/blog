@@ -41,10 +41,6 @@ source .venv/bin/activate
 ``` 
 flake8 . && isort .
 ```
-- Примените миграции для таблиц в БД:
-```
-python3 manage.py migrate
-```
 - Запустите сайт командой:
 ```
 python3 manage.py runserver
